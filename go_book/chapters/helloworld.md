@@ -1,5 +1,5 @@
 
-###print hello world
+###print hello world on terminal
 
 ```go
 
@@ -35,6 +35,38 @@
 
 ### how to execute binary code file 
 
-		./helloworld  <--|
+		$./helloworld  <--|
 
+### print hello web on web page
+
+```go
+
+	package main
+
+	import(
+			//"io"
+			"fmt"
+			"net/http"
+	   )
+
+	func HelloServer (w http.ResponseWriter,req *http.Request){
+			// io.WriteString(w,"hello world \n")
+			fmt.Fprintf(w,"helloweb")
+	 }
+	 
+	 func main(){
+			http.HandleFunc("/",HelloServer)
+			fmt.Println("server running on 9000")
+			http.ListenAndServe(":9000",nil)
+	 }
+
+
+```
+		save it as helloweb.go
+
+		$go run helloweb.go
+
+		open browser type localhost:9000 or 127.0.0.1:9000
+
+ 
 
