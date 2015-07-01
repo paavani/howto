@@ -35,6 +35,6 @@
 
 ### how to execute binary code file 
 
-		./helloworld  <--|
+		$./helloworld  <--|
 
 
