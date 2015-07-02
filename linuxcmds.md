@@ -8,6 +8,83 @@
      
      note:press 'q' to quit from manual pages 
 
+### Standard directory
+
+	(few point about folders)
+	/ 
+	root directory, starting point of the directory tree.
+
+	/home
+		(private) directories of users.
+
+	/dev
+		device files that represent hardware components
+
+	/etc
+		important files for system configuration.
+
+	/etc/init.d
+		boot scripts
+
+	/usr/bin
+		generally accessible programs.
+
+	/bin
+		programs needed early in the boot process.
+
+	/usr/sbin
+		programs reserved for the system administrator.
+
+	/sbin
+		programs reserved for the system administrator and needed for booting.
+
+	/usr/include
+		header files for the C compiler
+
+	/usr/include/g++
+		header files for the C++ compiler.
+
+	/usr/share/doc
+		various documentation files.
+
+	/usr/share/man
+		system manual pages (man pages).
+
+	/usr/src
+		source code of system software
+
+	/usr/src/linux
+		kernel source code.
+
+	/tmp, /var/tmp
+		temporary files.
+
+	/usr
+		all application programs
+
+	/var
+		configuration files (e.g., those linked from /usr)
+
+	/var/log
+		system log files
+
+	/var/adm
+		system administration data
+
+	/lib
+		shared libraries (for dynamically linked programs)
+
+	/proc
+		process file system.
+
+	/usr/local
+		local, distribution-independent extensions.
+
+	/opt
+		optional software, larger add-on program packages (such as KDE, GNOME, Netscape).
+
+	
+
 ### Display current username
     
     $logname
