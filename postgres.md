@@ -29,8 +29,10 @@
   SELECT table_name FROM information_schema.tables
   WHERE table_schema NOT IN ('information_schema','pg_catalog')
   
-    The information_schema is a PostgreSQL schema available as per the SQL standards which contains a collection of views such as tables, columns etc. The tables view provides the information about all tables in DB.
-    before enter into login db if u use this cmd then automatically ask pwd when using \c dbname
+    The information_schema is a PostgreSQL schema available as per the SQL standards which contains a collection of views such as tables, columns etc.
+	 The tables view provides the information about all tables in DB.
+    
+	 before enter into login db if u use this cmd then automatically ask pwd when using \c dbname
     psql -U username -d dbname -p 5433 -h  127.0.0.1 -W
    
 ### Roles and previledges
@@ -48,21 +50,26 @@
     select * from pg_shadow;
    
 ##create a role
+```sql
 
-  CREATE ROLE role_name
+	CREATE ROLE role_name;
 
+```
 ##How to grant permission in postgres
 
-	GRANT permission_type ON table_name to rolename
+	syntax:	GRANT permission_type ON table_name to rolename
      
      eg: permissiontype((arwdDxt--append(insert),read(select),write(update),delete(delete),D(Truncate),x(references),t(trigger)
-     
+```sql
+
      GRANT all on tablename to rolename;
      GRANT insert on tablename to rolename;
-     
+```
      --after using the above cmd pls check \z
    
 ##Use Group roles in postgres
+
+```sql
 
 	CREATE role temp_users;
 	
@@ -70,13 +77,18 @@
 	
 	GRANT temp_users to user3;
 
+```
+
 ##To REMOVE THE Permission in POSTGRES
 
-		REVOKE permission_type ON  table_name from user_name 
-		REVOKE all on tablename from rolename;
-    REVOKE insert on tablename from rolename;
+	Syntax:	REVOKE permission_type ON  table_name from user_name 
+	
+```sql
+	REVOKE all on tablename from rolename;
+	REVOKE insert on tablename from rolename;
          --check \z 
-   
+```
+
 ## To create a new trigger in PostgreSQL you need to:
 
 	Create a trigger function using CREATE FUNCTION statement.
@@ -85,6 +97,7 @@
 	
 ### Creating Trigger function
 ```sql
+
 	CREATE FUNCTION trigger_functionname RETURN  trigger AS
 ```
 ## To know list of functions
@@ -93,18 +106,72 @@
 	
 ## To list down all Triggers in database
 
-	select * from pg_trigger;
-	
-## To list down triggers on a particular table
 ```sql
+
+	select * from pg_trigger;
+
+```	
+## To list down triggers on a particular table
+
+```sql
+
 	SELECT tgname FROM pg_trigger, pg_class WHERE tgrelid=pg_class.oid AND relname='table_name';
+
 ```
 
 ## Dropping trigger
 
+```sql
+	
 	DROP TRIGGER trigger_name on table_name
-	
-	
-	
-	
 
+```
+	
+	
+	
+##CREATE DATABASE
+
+	Syntax: createdb  <DATABASE NAME>
+
+```sql		
+		createdb  testdb;
+```
+
+##Drop database
+
+	syantax:dropdb <db name>
+
+```sql
+		dropdb testdb;
+```
+
+##ALTER DATABASE
+
+
+	1.To change the database name
+	
+	Syntax:ALTER DATABASE  target_databasename  RENAME TO new_name;
+
+```sql
+
+ALTER DATABASE  testdb RENAME TO testhrdb;
+
+```
+
+	2.To change the owner of db
+	
+	Syntax:ALTER DATABASE target_database  OWNER TO new_owner;
+
+```sql
+
+	ALTER DATABASE testhrdb OWNER TO hr;
+
+```
+
+	Note :if hr role does not exist, create it by using follwing way
+
+```sql
+	
+	CREATE ROLE hr valid UNTIL 'infinity';
+	
+```
