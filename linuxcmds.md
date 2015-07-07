@@ -300,7 +300,7 @@
 
 	2.$ls -a
 
-	It list all files along  with hidden filess
+	It list all files along  with hidden filess(.filename)
 
 	3.$ls  -r 
 	
@@ -314,5 +314,56 @@
 	
 	It list all files based on date & time of creation
 
-  
+	6.$ls -l 
+ 
+	It list all files with  detailed information as follows
 
+	eg:
+	File	File 		NO.of 	Owner	Group		Size in Date	Time	Filename
+	Type	permissions	links	name	name		Bytes	
+	-----------------------------------------------------------------------------------------
+	d	rwxr-xr-x	2	pavan 	domain^users 	4096 	Jun 29 	10:41 	newproject
+	-	rw-r--r--	1	pavan 	domain^users  	584 	Jul  6 	19:15 	mytodo.md
+
+
+	Note: d ->directory, - ->file
+	
+	r-read,w-write ,x-execution  ( r=4 w=2 x=1)
+
+	Default permissions for directory :rwxr-xr-x
+				file	  :rw-r--r--
+    
+	Owner or user | group |other
+	rwx r-x r-x(755)--owner has read,write,execute permissions ,group and other has  read and execute permissions
+
+	we can change the permissions using chmod 744 <filename>
+	
+
+##Wild card  characters
+
+	*  :matches 0 or more characters
+	?  :matches any single character
+	[] :matches any single character in the given list
+	[-]:matches any single character in the given range
+
+	eg:$ls d*	$ls a???	$ls [vsd]*	$ls[abcdef]*  or $ls[a-f]*   $ls *t	
+	
+	$cp *.js ~/javascript		$cp abc/a1/*   .
+	
+	$rm *		$rm -i * 	$rm [bkt]*
+
+##head
+	It displays the first "n" lines from a given file
+	
+	Syntax :head -n filename
+	
+		$head filename     --it display first 10 lines
+		$head -20 filename -- it display first 20 lines	
+
+	Note:BY default it displays first 10 lines from the file
+
+##tail
+	It displays the last "n" lines from a given file
+	
+		$tail -20 filename
+		
