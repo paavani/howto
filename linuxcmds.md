@@ -83,7 +83,15 @@
 	/opt
 		optional software, larger add-on program packages (such as KDE, GNOME, Netscape).
 
-	
+##TO Know environment variable  path in linux ( case sensitive)
+
+	$env --it display all env variables
+
+	$env|grep GO	--it display GO path
+	$env|grep go  --case sensitive nothing to display
+
+	$env|grep postgres 
+
 
 ### Display current username
     
