@@ -14,8 +14,22 @@
 ## To see list of databases
 	\l or \l+ (it gives \l and including size,tablespace,description)
 
+##To see list of schemas in database
+
+	\dn -- It display list of schemas of connected database and owner
+
+	\dt *.* --It display the list of schemas,tables,owner
+
 ## To see list of tables
 	\d or
+
+	Note: By default it display the[ public schema] tables
+
+##To see list of tables of particular schema
+
+	syntax: \d schemaname.*
+	
+	\d practise.*
 
 ## To see table structure 
 	\d tablename
@@ -102,7 +116,12 @@
 ```
 ## To know list of functions
 
-	\df
+	Syntax:\df *functionname*
+	
+	\df *round* --It display list of available function of round
+
+	\df *max*
+
 	
 ## To list down all Triggers in database
 
@@ -137,7 +156,14 @@
 		createdb  testdb;
 ```
 
-##Drop database
+##Connect to the database
+
+	$psql testdb
+
+	Note:after connect to the database you can change to  another database using \c Target_database
+##Drop database(delete the database)
+	
+	It delete the database
 
 	syantax:dropdb <db name>
 
@@ -148,17 +174,17 @@
 ##ALTER DATABASE
 
 
-	1.To change the database name
+###To change the database name
 	
 	Syntax:ALTER DATABASE  target_databasename  RENAME TO new_name;
 
 ```sql
 
-ALTER DATABASE  testdb RENAME TO testhrdb;
+	ALTER DATABASE  testdb RENAME TO testhrdb;
 
 ```
 
-	2.To change the owner of db
+###To change the owner of db
 	
 	Syntax:ALTER DATABASE target_database  OWNER TO new_owner;
 
@@ -175,3 +201,36 @@ ALTER DATABASE  testdb RENAME TO testhrdb;
 	CREATE ROLE hr valid UNTIL 'infinity';
 	
 ```
+
+### To change the tablespace of db
+
+	Two tablespaces are automatically created by initdb.
+	
+		1.pg_global
+		2.pg_default
+
+	The pg_global tablespace is used for shared system catalogs.
+	
+	The pg_default tablespace is the default tablespace of the template1 and template0 databases.
+	
+	NOTE:pg_default  will be the default tablespace for other databases as well, unless overridden by a TABLESPACE clause in CREATE DATABASE.
+
+```sql
+	
+	ALTER DATABASE testhrdb
+	SET TABLESPACE hr_default;
+```
+
+	if the hr_default tablespace does not exist,you can create it as follows
+
+```sql
+	
+	CREATE TABLESPACE hr_default
+	OWNER hr
+	LOCATION '/pgdata/hr';
+
+```
+
+##CREATE TABLE
+
+
