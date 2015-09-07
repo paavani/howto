@@ -26,10 +26,15 @@
 
   $git status  
 
-  List the files you have changed and those you still need to add or commit
+  List the files you have changed and those you still need to add or commit.
+  
+  Note:Better to use this cmd very often,Sometimes things change and you don't notice it
 
 
 ##git add
+
+	Take the snapshot of the content of the current file and saved in temporary staging area	
+		
 
 	$git add <list-of-files>
 
@@ -49,9 +54,16 @@
 
 	$git add .			    --> Add all(new,modified and deleted)
 
+	$git add -A .         -->Add all 
+
 ## Commit
 
+	using this cmd you can permanently stored content of index in the repository
+
 	$ git commit -m "<content>"
+
+	
+	Note:Before using commit cmd must use git status cmd 
 
 ####Directly running commit instead of git add for modified files
 
@@ -62,13 +74,19 @@
 
 ##push
 
+	push cmd tells git where to put  our commits when we are ready
+
 	$git push -u origin master
+
+	origin: name of our remote is origin
+
+	master: default local branch name
 
 ##clone from exit  remote repository to local
 
 	$git clone <repository-url>
 
-###TO know Project history
+##TO know Project history
 
 	go to the project folder and give cmd as
 
@@ -107,9 +125,20 @@
 	$git branch -a
 
 ### To change from one branch to another branch
-
+	( to subbranch)
+	
 	$git checkout subbranch
 
 ### To Display the folder files in vertical manner
 
    $git ls-files
+
+###To remove file/files from staging area
+
+	$git reset <filename>
+	
+###To unstage the files
+
+	$git rm --cached <filename>
+
+
