@@ -123,6 +123,7 @@
 
 		Note: `*` denotes you are currently on which branch
 
+
 ###To list  all branches
 
 	$git branch -a
@@ -130,6 +131,10 @@
 ### To change from one branch to another branch
 	
 	$git checkout subbranch
+
+###To checkout and create branch at the same time 
+
+	$git checkout -b mybranch
 
 ##Merge the changes
 	
