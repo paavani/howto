@@ -82,6 +82,8 @@
 
 	master: default local branch name
 
+	-u  :tells  git to remember parameters,so next time we simply run git push 
+
 ##clone from exit  remote repository to local
 
 	$git clone <repository-url>
@@ -99,6 +101,7 @@
 	It displays the history of  complete diffs at each step
 
 
+#Managing branches and Merge the changes
 
 ##branch
 
@@ -125,9 +128,24 @@
 	$git branch -a
 
 ### To change from one branch to another branch
-	( to subbranch)
 	
 	$git checkout subbranch
+
+##Merge the changes
+	
+	switch to the subbranch,edit a file and commit the change and switch back to master branch 
+		
+		edit file
+		$git commit -a
+		git checkout master
+
+	To merge the changes made in subbranch into master, run
+
+	$git  merge subbranch
+	
+### To delete the branch
+
+	$git branch -d subbranch
 
 ### To Display the folder files in vertical manner
 
