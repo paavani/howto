@@ -65,6 +65,10 @@
 	
 	Note:Before using commit cmd must use git status cmd 
 
+	-a it auto removes deleted files with commit
+
+	$git commit -am "delete stuff"
+
 ####Directly running commit instead of git add for modified files
 
 	$ git commit -a
@@ -152,6 +156,15 @@
 
 	$git branch -d subbranch
 
+	Note:It won't work,when you delete something ,that hasn't been merged
+
+###Force delete
+
+	$git branch -D subbranch  ///here -D =  -d -f
+
+			  or
+	$git branch -d -f subbranch		  
+
 ### To Display the folder files in vertical manner
 
    $git ls-files
@@ -164,4 +177,6 @@
 
 	$git rm --cached <filename>
 
+###To remove folders
 
+	$git rm -r <foldername>
