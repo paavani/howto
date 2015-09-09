@@ -92,6 +92,11 @@
 
 	$git clone <repository-url>
 
+##how to change clone repo url  to your repo url
+	$git remote -v  //verify remote url before and after this cmd
+	
+	$git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
+	
 ##TO know Project history
 
 	go to the project folder and give cmd as
