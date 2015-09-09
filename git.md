@@ -185,3 +185,27 @@
 ###To remove folders
 
 	$git rm -r <foldername>
+
+###To know  path of project url
+
+	$git remote -v
+	
+	Note: to get more help
+	
+###url  updating using HTTPS and SSH
+
+	using HTTPS:
+	
+	https://github.com/username/repositoryname.git
+
+	If you are updating to  use SSH,url is
+
+	git@github.com:username/repositoryname.git
+
+###Switching from remote URLs from SSH to HTTPS
+
+	$git remote set-url origin https://github.com/username/repository.git
+
+	verify that remote url changed or not,run
+
+	$git remote -v
