@@ -209,3 +209,11 @@
 	verify that remote url changed or not,run
 
 	$git remote -v
+
+##Reset master back to origin/master
+
+	$git reset --hard origin/master 
+	
+	Note:when checkout to another branch not happen use this ,it will reset the path
+
+
