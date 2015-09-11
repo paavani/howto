@@ -216,4 +216,11 @@
 	
 	Note:when checkout to another branch not happen use this ,it will reset the path
 
+##Discard changes in the working directory
+ 
+    $git checkout -- <filename>
+ 
+    If multiple branches has the same file,run as
+
+	 $git checkout <branchname> -- <filename>
 
