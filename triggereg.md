@@ -147,5 +147,25 @@ insert into invoice (id,customer) values (1,'Raja');
 
        
 ###before insert or update the  rows, change into upper case using trigger
-
+```sql
 	CREATE TABLE practise.new_book(id bigserial primary key,title text,author text);
+```
+
+### CREATE A trigger for to change text into upper case
+
+```sql
+	CREATE  OR REPLACE FUNCTION f_trigbooks() RETURNS trigger as
+	$$
+	BEGIN
+		NEW.title := upper(NEW.title);
+		RETURN NEW;
+	END;
+	$$
+		LANGUAGE  plpgsql VOLATILE;
+
+		CREATE trigger trig_books
+		BEFORE INSERT  OR UPDATE  OF title,author on practise.new_book
+		FOR EACH ROW
+		EXECUTE PROCEDURE f_trigbooks();
+```
+
