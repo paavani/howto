@@ -146,4 +146,6 @@ insert into invoice (id,customer) values (1,'Raja');
  
 
        
+###before insert or update the  rows, change into upper case using trigger
 
+	CREATE TABLE practise.new_book(id bigserial primary key,title text,author text);
