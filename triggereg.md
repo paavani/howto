@@ -151,7 +151,7 @@ insert into invoice (id,customer) values (1,'Raja');
 	CREATE TABLE practise.new_book(id bigserial primary key,title text,author text);
 ```
 
-### CREATE A trigger for to change text into upper case
+### CREATE A trigger for to change title into upper case
 
 ```sql
 	CREATE  OR REPLACE FUNCTION f_trigbooks() RETURNS trigger as
@@ -169,3 +169,10 @@ insert into invoice (id,customer) values (1,'Raja');
 		EXECUTE PROCEDURE f_trigbooks();
 ```
 
+###Insert values into table
+     
+	  Before insert values into table,trigger will be fire
+
+```sql
+	insert into practise.new_book (title,author) values ('Wings of Fire','Kalam'),('Inspiring thoughts','Kalam');
+```
