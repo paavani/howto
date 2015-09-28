@@ -110,6 +110,10 @@
 	It displays the history of  complete diffs at each step
 
 
+##To see the code of particular commit data
+  
+     $git show <first 7 seven digits of commit >
+
 #Managing branches and Merge the changes
 
 ##branch
