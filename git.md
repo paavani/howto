@@ -224,3 +224,8 @@
 
 	 $git checkout <branchname> -- <filename>
 
+## To get  the last commit of current project folder
+
+	$git rev-parse HEAD
+
+
