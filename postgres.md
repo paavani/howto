@@ -7,6 +7,19 @@
 	
 	\?  --> psql cmds
 
+##Connect to the database using sudo cmd
+
+	$sudo -u postgres psql databasename
+
+	$sudo -u postgres psql mydb
+
+##To know only postgresql path
+
+    $sudo -u postgres printenv PATH
+   
+    Note: PATH is case sensitive,you must give it as capitals.
+
+
 ## To view current database connection                                                  
 	\conninfo(it shows connected database name,user,port number and socket)
 	or \c (it shows  connected database name and user only)
