@@ -1,5 +1,7 @@
 ## Postgres
-
+ 
+ Database is a collection 
+ 
 	\h  --> help for SQL commands
 	it shows list of SQL commands
 	
@@ -34,18 +36,18 @@
 	\dt *.* --It display the list of schemas,tables,owner
 
 ## To see list of tables
-	\d or
+	\d+ or \dt
 
 	Note: By default it display the[ public schema] tables
 
 ##To see list of tables of particular schema
 
-	syntax: \d schemaname.*
+	syntax: \dt schemaname.*
 	
-	\d practise.*
+	\dt practise.*
 
 ## To see table structure 
-	\d tablename
+	\d tablename or 
 	
 ## To list all tables,views and sequences in databasae 
 	\dp or \z
@@ -53,8 +55,10 @@
 
 ### 1.Listing all the tables in the database
 
+```sql
   SELECT table_name FROM information_schema.tables
-  WHERE table_schema NOT IN ('information_schema','pg_catalog')
+  WHERE table_schema NOT IN ('information_schema','pg_catalog');
+``` 
   
     The information_schema is a PostgreSQL schema available as per the SQL standards which contains a collection of views such as tables, columns etc.
 	 The tables view provides the information about all tables in DB.
@@ -217,12 +221,14 @@
 
 ### To change the tablespace of db
 
+		A tablespace is a location on disk where PostgreSQL stores data files containing database objects e.g., indexes., tables, etc. PostgreSQL uses a tablespace to map a logical name to physical location on disk.
+
 	Two tablespaces are automatically created by initdb.
 	
-		1.pg_global
+		1.pg_global  --It stores all global data
 		2.pg_default
 
-	The pg_global tablespace is used for shared system catalogs.
+	The pg_global tablespace is used for shared system catalogs(it doesn't belongs to any particular database).
 	
 	The pg_default tablespace is the default tablespace of the template1 and template0 databases.
 	
@@ -243,7 +249,36 @@
 	LOCATION '/pgdata/hr';
 
 ```
+  Note: Name of the tablespace shouldn't start with pg_
+  
+  here  location denotes the home directory , for windows we use 'c:/pgdata/hr'
 
 ##CREATE TABLE
+
+	CREATE TABLE item_test(itemname text,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

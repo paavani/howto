@@ -52,3 +52,12 @@
 
 		$./configure && make && sudo make install
 
+
+###If some reasons npm is not installed use npm ,run below cmd
+
+		$sudo apt-get install npm
+
+###To update the latest version  of npm 
+
+		$sudo npm install npm -g 
+
