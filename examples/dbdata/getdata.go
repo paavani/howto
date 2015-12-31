@@ -4,6 +4,7 @@ import(
   "bitbucket.org/ekanna/datastore"
   _ "github.com/lib/pq"
   "database/sql"
+  "encoding/json"
   "log"
   "fmt"
   "os"
@@ -26,15 +27,16 @@ func init() {
 
 type Itempost struct{
 
-	  ItemId   string  
-	  ItemName string  
-	  Uom      string  
-	  Amount   float64 
+	  ItemId   string  `json:"itemid"` //to display data as a jsondata write like this 
+	  ItemName string  `json:"itemname"`
+	  Uom      string  `json:"uom"`
+	  Amount   float64 `json:"amount"`
+
 }
 
 func getItemdata(){
 	  var data []Itempost
-	  err := ds.GetRows(&data,"pp.Itempost","")
+	  err := ds.GetRows(&data,"pp.Itempost","") // for displaying all columns use "",o/w specify column names
 
 	  if err != nil {
 			logger.Println(err)
@@ -42,6 +44,12 @@ func getItemdata(){
 	   		}
 	   		  logger.Printf("%+v", data)
 		
+	 jsonData, err := json.Marshal(data)
+	  if err != nil {
+	    logger.Println(err)
+	  }
+	  fmt.Println(string(jsonData))
+
    }
 
 func main(){
