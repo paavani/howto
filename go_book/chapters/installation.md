@@ -63,5 +63,8 @@
 	
 		$env|grep go
 
+##How to install golang doc
 
+		$sudo apt-get install golang-doc
 
+		Note:After installation Run  godoc -http= :6060 and open localhost:6060 in browser
