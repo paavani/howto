@@ -67,7 +67,8 @@ It is used for create new files or to modify existing files
   :/string/ --top to bottom search (n -> next occurence)
   
   :?string? --bottom to top search (N -> previous occurence)
-
+  :undo  --undo the changes
+  :redo	--redo the changes
 ###delete line 
 
 	:nd  --delete nth line
