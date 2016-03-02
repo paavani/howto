@@ -374,4 +374,19 @@
 	It displays the last "n" lines from a given file
 	
 		$tail -20 filename
-		
+	
+##how to search the particular filename
+	 
+	  $locate <searchfile or word name>
+	    
+						or
+	 
+     $find|grep <searchfile or wordname>
+	 
+	    To ignore the case sensitive
+	 
+	    $locate -i pivot
+	    $find|grep -i pivot
+	 
+	   It will give both lower case and upper case available files
+
