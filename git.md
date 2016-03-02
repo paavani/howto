@@ -101,13 +101,20 @@
 
 	go to the project folder and give cmd as
 
-	$git log
+	1.$git log
 
 	It displays the history of what you change
 
-	$git log -p
+	2.$git log -p
 
 	It displays the history of  complete diffs at each step
+	
+	3.$git log --author="name" -p <filenamepath> 
+	
+
+	4.$git log --name-status
+
+	To see which files have been changed
 
 
 ##To see the code of particular commit data
