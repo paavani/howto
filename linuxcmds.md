@@ -390,3 +390,12 @@
 	 
 	   It will give both lower case and upper case available files
 
+#How to see memory usage of linux syster
+
+	$top
+
+	$free -m //it will show in mbs   $free -g OR free --it will show in kb
+
+	$vmstat -s
+
+
