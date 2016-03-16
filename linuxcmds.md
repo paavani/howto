@@ -390,12 +390,28 @@
 	 
 	   It will give both lower case and upper case available files
 
-#How to see memory usage of linux syster
+#How to see memory usage of linux system
 
 	$top
 
-	$free -m //it will show in mbs   $free -g OR free --it will show in kb
+	$free -m //it will show memory in MB  OR  
+	$free -g  ( GB)  OR 
+	$free  --It will show in KB 
 
 	$vmstat -s
+	
+	$cat proc/meminfo
+	
+##How to see difference between  two files
 
+	$diff filename1 filename2 --It will compare and give the difference in one file   //confusion will come
 
+			or
+	
+	$vim -d  filename1 filename2  //It is for files
+
+	$vim -d example/filename1  practise/filename2  
+	
+	--we will get the side by side file,difference will display in color and no confusion 
+
+	 
