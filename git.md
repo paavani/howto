@@ -20,7 +20,9 @@
 
 ## Checking your settings
 
-  $git config --list
+  $git config --list or
+
+  $cat .git/config 
 
 ##Status
 
