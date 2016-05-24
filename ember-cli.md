@@ -37,6 +37,11 @@
 
 		for more info run :  npm help json
 
+##npm config setting for behind the corporate proxy
+		
+		$npm config set proxy http://192.168. .:310
+
+		$npm config set https-proxy http://192.168. .:310
 
 ###Requirements
 
@@ -141,3 +146,4 @@
 			});
 
 			export default Todo;
+
