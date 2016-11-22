@@ -52,6 +52,8 @@
 ## To list all tables,views and sequences in databasae 
 	\dp or \z
 
+##To see list of domains
+	\dD , for schemas \dD schemaname.*
 
 ### 1.Listing all the tables in the database
 
@@ -68,7 +70,7 @@
    
 ### Roles and previledges
   
-  \du
+  \du or \dg
    
      It displays the list of  rolenames(users) of  DB and their Access previledges
     or
