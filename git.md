@@ -241,4 +241,8 @@
 
 	$git rev-parse HEAD
 
-
+##To see previous git reverts
+	$git log --grep="revert"  -- don't give the gap between --grep="revert"
+				or
+	$git log --grep="Revert"  or 
+	$git log --grep="reverts"
