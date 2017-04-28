@@ -1,10 +1,11 @@
-##Markdown
-	Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *
+## Markdown
+Markdown is a way to style text on the web.You control the display of the document.formatting words as bold or italic,adding images,and creating lists are just a few of the things we can do with Markdown. 
+Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *
 	mostly we can use in GITHUB  and BITBUCKET
 
 	Save: Files with the .md or .markdown extension
 
-##Headers
+## Headers
 
 ```
 # H1
@@ -41,7 +42,7 @@ Alt-H1
 Alt-H2
 ------
 
-##Emphasis
+## Emphasis
 
 ```
 - 1.Italic:
@@ -72,7 +73,7 @@ Alt-H2
 - 3.combined both
       _You **can** combine them_
 
-##Strikedthrough
+## Strikedthrough
 
 * ~~Hello~~
 * Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
@@ -80,7 +81,7 @@ Alt-H2
 ```
 Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 ```
-##Blockquotes
+## Blockquotes
 
 ```
 	True is:
@@ -93,7 +94,7 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 	> We're living the future so
 	> the present is our past
 
-##Inline code
+## Inline code
 	I think you should use an
 	`<addr>` element here instead.
 
@@ -101,7 +102,7 @@ Any word wrapped with two tildes (like ~~this~~) will appear crossed out.
 	I think you should use an
 	`<addr>` element here instead.
 ```
-##Lists
+## Lists
 
 1. Unordered:
 
@@ -151,7 +152,7 @@ Alternatively,
   - Like this
   - And this
 
-##Task Lists
+## Task Lists
 
 ```
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
@@ -168,12 +169,12 @@ Alternatively,
 	>Emojis
   emoji :sparkles: :camel: :boom:
 
-##Images
+## Images
 ```
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 ```
-##Links
+## Links
 
 ```
 	http://github.com - automatic!
@@ -184,13 +185,13 @@ Format: ![Alt Text](url)
 * <https://guides.github.com/features/mastering-markdown/>
 
 
-##Syntax Highlighting
+## Syntax Highlighting
 
 ```
 	this is highlight
 ```
 
-##Tables
+## Tables
 
 create tables using hyphens - (for the first row), and then separating each column with a pipe |
 ```
@@ -205,7 +206,7 @@ First Header | Second Header
 Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 
-##Horizontal Rule
+## Horizontal Rule
 
 ```
 Three or more...
@@ -235,7 +236,7 @@ ___
 
 Underscores
 
-##Resources
+## Resources
 	
 * <https://guides.github.com/features/mastering-markdown/>
 * <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
