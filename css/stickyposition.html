@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+		  box-sizing:border-box;
+		}
+		.layout{
+			border:2px solid blueviolet;
+		}
+		.nav-layout{
+			border:2px solid deeppink;
+		}
+		.sec-layout{
+			border:2px solid green;
+		}
+		body {
+			margin-bottom: 120px;
+		}
+		h1{
+			text-align:center;
+		}
+		h2{
+			background-color:lightgreen;
+			position:sticky;
+			top:0px;
+		}
+		pre,p{ 
+			font-size:20px;
+		}
+		pre{
+			font-family: "DejaVu Serif";
+			border:2px solid lightslategray
+		}
+		.relative {
+			position: relative;
+			width: 600px;
+			height: 400px;
+		}
+		.absolute {
+			position: absolute;
+			top: 120px;
+			right: 0;
+			width: 300px;
+			height: 200px;
+		}
+		.container {
+			position: relative;
+		}
+		nav {
+			position: absolute;
+			left: 0px;
+			width: 200px;
+		}
+		section {
+			/* position is static by default */
+			margin-left: 200px;
+		}
+		footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			height: 70px;
+			background-color: white;
+			width: 100%;
+		}
+		
+	</style>
+</head>
+<body>
+  <h1>Css Styles</h1>
+  <div>
+	<h2>Position types</h2>
+	<h3> 1.position :static</h3>
+	<h3> 2.position :fixed </h3>
+	<h3> 3.position :relative</h3>
+	<h3> 4.position :absolute</h3>
+	<h3> 5.position :sticky</h3>
+ </div>
+ <div>
+	<h2>About Position </h2>
+	<p><h2> 1.static :</h2>
+	  => static is the default value. An element with position: static; is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned. 
+	</p>
+	<p><h2>2.fixed :</h2>
+	 <pre>
+	   => A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+		As with relative, the top, right, bottom, and left properties are used. 
+		
+		.fixed {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			width: 200px;
+			background-color: white;
+		}
+		   A fixed element does not leave a gap in the page where it would normally have been located. 
+	</pre>
+	</p>
+	<p><h2>3.relative:</h2>
+	  <pre>
+		=> Relative behaves the same as static unless you add some extra properties. 
+		
+		.relative1 {
+			position: relative;
+		}
+	 </pre>
+	 <pre>
+		=> Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position.
+			Other content will not be adjusted to fit into any gap left by the element. 
+
+		.relative2 {
+			position: relative;
+			top: -20px;
+			left: 20px;
+			background-color: white;
+			width: 500px;
+		} 
+
+   </pre>
+   
+</p>
+<p><h2>4.absolute</h2>
+	<pre>
+		 absolute is the trickiest position value.absolute behaves like fixed except relative to the nearest positioned ancestor instead of relative to the viewport.
+		 If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Remember, a "positioned" element is one whose position is anything except static.
+
+		Here is a simple example:
+
+		.relative {
+		position: relative;
+		width: 600px;
+		height: 400px;
+		}
+		.absolute {
+		position: absolute;
+		top: 120px;
+		right: 0;
+		width: 300px;
+		height: 200px;
+		}
+	</pre>
+
+</p>
+	<h2>relative and absolute example</h2>
+	<div class ="relative layout">
+		<span>relative</span>
+	   <p>This element is relatively-positioned. If this element was position: static; its absolutely-positioned child would escape and would be positioned relative to the document body. </p>
+	   <div class="absolute nav-layout">
+		   <span>absolute</span>
+		   <p>This element is absolutely-positioned. It's positioned relative to its parent</p>
+		</div>
+
+   </div>
+   	<p><h2>5.sticky</h2>
+	<pre>
+		sticky is a new way to position elements and is conceptually similar to position: fixed.
+		The difference is that a stickily positioned element behaves like position: relative within its parent, until a given offset threshold is met.
+
+
+		background-color:lightgreen;
+		position:sticky;
+		top:0px;
+	</pre>
+   </p>
+</div>
+<div><h2>Position Example</h2>
+	<pre>
+		.container {
+			position: relative;
+		}
+		nav {
+			position: absolute;
+			left: 0px;
+			width: 200px;
+		}
+		section {
+			/* position is static by default */
+			margin-left: 200px;
+		}
+		footer {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			height: 70px;
+			background-color: white;
+			width: 100%;
+		}
+		body {
+			margin-bottom: 120px;
+		}
+	</pre>
+
+	<div class ="container layout">
+		<nav class="nav-layout">
+			<span>nav</span>
+			<ul>
+				<li>Home</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+		<section class="sec-layout">
+			<span>section</span>
+			<p>The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap </p>
+		</section>
+		<section class="sec-layout">
+			<span>section</span>
+			<p>hai data</p>
+		</section>
+		<section class="sec-layout">
+			<span>section</span>
+			<p> Notice what happens when you resize your browser. It works nicely! </p>
+		</section>
+
+		<footer class="layout">footer fixed position </footer>
+	<div>
+</div>
+
+</body>
+</html>
