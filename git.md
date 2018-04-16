@@ -24,7 +24,7 @@
 
   $cat .git/config 
 
-##Status
+## Status
 
   $git status  
 
@@ -32,23 +32,23 @@
   
   Note:Better to use this cmd very often,Sometimes things change and you don't notice it
 
-##git diff
+## git diff
 
  1. To see what you’ve changed but not yet staged,use git diff
-    $git diff
+   	 $git diff
 
  2. To see what you have staged
-    $git diff --staged  --this command compares your staged changes to your last commit
-    or
-    $git diff --cached
+    	$git diff --staged  --this command compares your staged changes to your last commit
+    	or
+    	$git diff --cached
 
  3. To see particular file changes or diff
-    $git diff <filename>
+    	$git diff <filename>
  
  4. To see word difference in modified file
-    $git diff --word-diff
+    	$git diff --word-diff
  
-##git add
+##	git add
 
 	Take the snapshot of the content of the current file and saved in temporary staging area	
 		
@@ -57,7 +57,7 @@
 
 	to add list
 
-###Different ways to add
+###	Different ways to add
 
 	$git add --all        --> Add all files
 
@@ -86,14 +86,14 @@
 
 	$git commit -am "delete stuff"
 
-####Directly running commit instead of git add for modified files
+#### Directly running commit instead of git add for modified files
 
 	$ git commit -a
 
 	Note: It is only for modified files not for new files
 
 
-##push
+## push
 
 	push cmd tells git where to put  our commits when we are ready
 
@@ -105,16 +105,16 @@
 
 	-u  :tells  git to remember parameters,so next time we simply run git push 
 
-##clone from exit  remote repository to local
+## clone from exit  remote repository to local
 
 	$git clone <repository-url>
 
-##how to change clone repo url  to your repo url
+## how to change clone repo url  to your repo url
 	$git remote -v  //verify remote url before and after this cmd
 	
 	$git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git
 	
-##TO know Project history
+## TO know Project history
 
 	go to the project folder and give cmd as
 
@@ -134,17 +134,17 @@
 	To see which files have been changed
 
 
-##To see the code of particular commit data
+## To see the code of particular commit data
   
      $git show <first 7 seven digits of commit >
 
-#Managing branches and Merge the changes
+# Managing branches and Merge the changes
 
-##branch
+## branch
 
 	 single git repository by default branch is master.we can create and maintain multiple branches.
 
-###To create a new branch
+### To create a new branch
 
 	$git branch <branchname>
 
@@ -161,7 +161,7 @@
 		Note: `*` denotes you are currently on which branch
 
 
-###To list  all branches
+### To list  all branches
 
 	$git branch -a
 
@@ -169,11 +169,11 @@
 	
 	$git checkout subbranch
 
-###To checkout and create branch at the same time 
+### To checkout and create branch at the same time 
 
 	$git checkout -b mybranch
 
-##Merge the changes
+## Merge the changes
 	
 	switch to the subbranch,edit a file and commit the change and switch back to master branch 
 		
@@ -191,7 +191,7 @@
 
 	Note:It won't work,when you delete something ,that hasn't been merged
 
-###Force delete
+### Force delete
 
 	$git branch -D subbranch  ///here -D =  -d -f
 
@@ -202,25 +202,25 @@
 
    $git ls-files
 
-###To remove file/files from staging area
+### To remove file/files from staging area
 
 	$git reset <filename>
 	
-###To unstage the files
+### To unstage the files
 
 	$git rm --cached <filename>
 
-###To remove folders
+### To remove folders
 
 	$git rm -r <foldername>
 
-###To know  path of project url
+### To know  path of project url
 
 	$git remote -v
 	
 	Note: to get more help
 	
-###url  updating using HTTPS and SSH
+### url  updating using HTTPS and SSH
 
 	using HTTPS:
 	
@@ -230,7 +230,7 @@
 
 	git@github.com:username/repositoryname.git
 
-###Switching from remote URLs from SSH to HTTPS
+### Switching from remote URLs from SSH to HTTPS
 
 	$git remote set-url origin https://github.com/username/repository.git
 
@@ -238,13 +238,13 @@
 
 	$git remote -v
 
-##Reset master back to origin/master
+## Reset master back to origin/master
 
 	$git reset --hard origin/master 
 	
 	Note:when checkout to another branch not happen use this ,it will reset the path
 
-##Discard changes in the working directory
+## Discard changes in the working directory
  
     $git checkout -- <filename>
  
@@ -256,7 +256,7 @@
 
 	$git rev-parse HEAD
 
-##To see previous git reverts
+## To see previous git reverts
 	$git log --grep="revert"  -- don't give the gap between --grep="revert"
 				or
 	$git log --grep="Revert"  or 
