@@ -32,7 +32,22 @@
   
   Note:Better to use this cmd very often,Sometimes things change and you don't notice it
 
+##git diff
 
+ 1. To see what you’ve changed but not yet staged,use git diff
+    $git diff
+
+ 2. To see what you have staged
+    $git diff --staged  --this command compares your staged changes to your last commit
+    or
+    $git diff --cached
+
+ 3. To see particular file changes or diff
+    $git diff <filename>
+ 
+ 4. To see word difference in modified file
+    $git diff --word-diff
+ 
 ##git add
 
 	Take the snapshot of the content of the current file and saved in temporary staging area	
